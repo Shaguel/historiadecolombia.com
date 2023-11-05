@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia De Colombia</title>
+    <style>
+          @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dosis:wght@800&family=EB+Garamond&family=Farsan&family=Manrope:wght@600;800&family=Nosifer&family=Press+Start+2P&family=Roboto:wght@900&family=Russo+One&display=swap');
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .full-vh{
+            display: grid;
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(255 0 0);
+        }
+        .container-main-title{
+            display: flex;
+            justify-content: center;
+            align-self: center;
+        }
+        #main-title{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-transform: uppercase;
+            font-size: 6rem;
+            letter-spacing: 8px;
+            font-weight: normal;
+            color: white;
+        }
+        #sub-title{
+            position: absolute;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-transform: uppercase;
+            margin-top: 178px;
+            font-size: 2rem;
+            letter-spacing: 4px;
+            color: white;
+            font-weight: normal;
+        }
+        .middle-page{
+            margin: 200px;
+        }
+        .art-title{
+            font-size: 3.6rem;
+            font-family: 'Bebas Neue', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            padding-top: 50px
+        }
+        .art-prfo{
+            font-family: sans-serif;
+            font-size: 22px;
+        }
+        .sub-art-title{
+            font-size: 1.5rem;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            font-weight: 1000;
+        }
+        .sub-art-prfo{
+            font-family: sans-serif;
+            font-size: 22px;
+        }
+        .bar-container{
+            display: flex;
+            flex-direction: column;
+            position:absolute;
+            right: 17px;
+            cursor: pointer;
+            padding: 10px;
+
+        }
+        .bar{
+            width: 54px;
+            height: 10px;
+            background-color: white;
+            margin: 4px 0;
+        }
+        .opciones {
+            display: none;
+            list-style: none;
+            padding: 0;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            position: absolute;
+            top: 0;
+            right: 81px; /* Ajusta la posición según lo necesites */
+        }
+
+        .opciones li {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .opciones li:hover {
+            background-color: #ddd;
+        }
+        /*sub temas*/
+        .sub-temas{
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+        .sub-temas > h3{
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 4px;
+            text-align: center;
+            font-size: 34px;
+        }
+        .sub-temas-2{
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+        .sub-temas-2 > h4{
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 4px;
+        }
+        /*fin sub-temas*/
+        .subir-del-todo{
+            position: fixed;
+            bottom: 20px;
+            right: 17px;
+            padding: 10px;
+            background-color: transparent;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .subir-del-todo img {
+            width: 30px;
+            height: 30px;
+            display: block;
+            margin: auto;
+        }
+        .subir{
+            position: fixed;
+            bottom: 20px;
+            left: 17px;
+            padding: 10px;
+            background-color: #ffffff00;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .subir img {
+            width: 30px;
+            height: 30px;
+            display: block;
+            margin: auto;
+        }
+        .bajar{
+            position: fixed;
+            bottom: 20px;
+            left: 80px;
+            padding: 10px;
+            background-color: transparent;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .bajar img {
+            width: 30px;
+            height: 30px;
+            display: block;
+            margin: auto;
+        }
+        .comments-section{
+            display: flex;
+            flex-direction: column;
+        }
+        .comentarios{
+            margin-left: 8%;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 44px;
+        }
+        /*footer */
+        .footer {
+            background-color: #000000;
+            color: #fff;
+            margin-top: 45px;
+            padding: 60px 0;
+            }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            }
+    </style>
+</head>
+<body>
+    <div class="full-vh">
+        <div class="bar-container" id="container" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="opciones" id="opciones">
+            <li><a href="#la-prehistoria-en-colombia">LA PREHISTORIA EN COLOMBIA</a></li>
+            <li><a href="#epoca-precolombina">ÉPOCA PRECOLOMBINA</a></li>
+            <li><a href="#epoca-hispanica">LA ÉPOCA HISPÁNICA</a></li>
+            <li><a href="#epoca-de-la-independencia">ÉPOCA DE LA INDEPENDENCIA</a></li>
+            <li><a href="#la-republica-del-siglo-xix">LA REPÚBLICA DEL SIGLO XIX</a></li>
+            <li><a href="#siglo-xx-en-colombia">SIGLO XX EN COLOMBIA</a></li>
+            <li><a href="#siglo-xxi-en-colombia">SIGLO XXI EN COLOMBIA</a></li>
+
+
+        </ul>
+        
+        <div class="container-main-title">
+            <h1 id="main-title">Historia De Colombia</h1>
+            <h2 id="sub-title">Desde la prehistoria hasta el siglo XXI</h2>
+        </div>
+    </div>
+
+    <div class="middle-page">
+        <h2 class="art-title section" id="la-prehistoria-en-colombia">1- La prehistoria en colombia</h2>
+        <p class="art-prfo">La prehistoria en Colombia se refiere al periodo anterior a la llegada de los conquistadores españoles en el siglo XVI, durante el cual no existían registros escritos y la información sobre las culturas y sociedades se basa en evidencias arqueológicas y antropológicas. Este periodo se extiende desde la llegada de los primeros habitantes a la región, hace varios miles de años, hasta la llegada de los europeos en el siglo XV.</p>
+        <p class="art-prfo">La evidencia arqueológica indica que los primeros pobladores de lo que ahora es Colombia llegaron hace aproximadamente 13,000 años, provenientes de Asia, a través del puente de tierra que unía los continentes americano y asiático en el Estrecho de Bering.</p>
+        <p class="art-prfo">A lo largo de milenios, diferentes culturas prehistóricas florecieron en el territorio colombiano, adaptándose a diversos ecosistemas y desarrollando habilidades específicas para la caza, la recolección y la agricultura. Se han encontrado vestigios arqueológicos que testimonian la existencia de sociedades complejas con sistemas de organización social, estructuras ceremoniales y tecnologías avanzadas para la época.</p>
+        <p class="art-prfo">Estas culturas prehistóricas legaron un rico patrimonio arqueológico, como petroglifos, herramientas de piedra, cerámica y otros objetos que proporcionan valiosa información sobre sus creencias, costumbres y formas de vida.</p>
+        <p class="art-prfo">La prehistoria en Colombia es un fascinante campo de estudio que nos permite asomarnos a las raíces profundas de las culturas que habitaron este territorio antes de la llegada de los europeos. Aunque no disponemos de registros escritos, la evidencia arqueológica y antropológica nos brinda una ventana al pasado y nos ayuda a comprender la riqueza y diversidad de las civilizaciones precolombinas que contribuyeron a la formación de la identidad cultural de Colombia.</p>
+        <div class="sub-temas">
+            <h3>Paleolítico</h3>
+            <p>Este fue el periodo más antiguo de la prehistoria en Colombia, que se remonta a aproximadamente 12,000 años atrás. Durante esta etapa, las poblaciones eran principalmente nómadas y dependían de la caza, la pesca y la recolección de alimentos. Utilizaban herramientas de piedra, hueso y madera para sus actividades diarias.</p>
+            <h3>Mesolítico y Neolítico Temprano</h3>
+            <p>Durante estos subperiodos, que se extienden aproximadamente entre 10,000 a 5,000 años atrás, hubo un cambio gradual hacia una mayor sedentarización y la adopción de la agricultura y la ganadería. Las comunidades comenzaron a cultivar plantas y domesticar animales, lo que permitió una mayor estabilidad y un crecimiento poblacional.</p>
+            <h3>Neolítico Tardío y Calcolítico</h3>
+            <p>Esta etapa, que se ubica entre 5,000 a 2,000 años atrás, se caracterizó por un mayor desarrollo de la agricultura y la ganadería, así como el uso de metales como el cobre. Surgieron sociedades más complejas con sistemas de organización social más estructurados.</p>
+            <h3>Horizonte Preclásico y Clásico</h3>
+            <p> En esta fase, que abarca desde hace aproximadamente 2,000 a 1,000 años, se produjo un florecimiento de diversas culturas en diferentes regiones de Colombia. Destacan los tairona en la Sierra Nevada de Santa Marta y los muiscas en el altiplano andino, quienes construyeron complejas estructuras y sistemas de gobierno.</p>
+            <h3>Periodo de Contacto</h3>
+            <p>A partir de la llegada de los conquistadores españoles en el siglo XVI, la prehistoria en Colombia llegó a su fin. Este evento marcó un punto de inflexión en la historia del país, con la introducción de nuevas tecnologías, religiones y formas de organización social que transformaron radicalmente la vida de las poblaciones indígenas.</p>
+        </div>
+        <p class="art-prfo">Es importante recordar que estos subperiodos son aproximados y las fechas pueden variar según las investigaciones arqueológicas más recientes. La prehistoria en Colombia es un campo de estudio en constante evolución a medida que los arqueólogos y antropólogos descubren y analizan nuevos hallazgos que arrojan luz sobre el pasado de esta fascinante región.</p>
+
+        <!--época precolombina-->
+        <h2 class="art-title section" id="epoca-precolombina">2- Época precolombina</h2>
+        <p class="art-prfo">La época precolombina en la historia de Colombia se refiere al periodo que abarca miles de años antes de la llegada de los europeos a América. Durante este tiempo, diversas culturas indígenas habitaron el territorio colombiano, dejando un legado cultural y arqueológico rico y diverso.</p>
+        <p class="art-prfo">Colombia fue hogar de una amplia variedad de civilizaciones precolombinas, cada una con sus propias tradiciones, idiomas, estructuras sociales y sistemas de gobierno. Entre las culturas más destacadas se encuentran los muiscas en la región andina, los tayronas en la Sierra Nevada de Santa Marta, los quimbayas en la región del Eje Cafetero y los zenúes en la región del actual departamento de Córdoba.</p>
+        <p class="art-prfo">Estas culturas desarrollaron complejas sociedades agrícolas, con avanzadas técnicas de cultivo, sistemas de irrigación y construcciones monumentales. Además, crearon expresiones artísticas como la cerámica, la orfebrería y las esculturas en piedra, que reflejaban su cosmología y creencias espirituales.</p>
+        <p class="art-prfo">Las poblaciones precolombinas también mantuvieron intercambios comerciales y culturales con otras regiones de América Latina, lo que contribuyó a la diversidad cultural del territorio colombiano.</p>
+        <p class="art-prfo">La época precolombina llegó a su fin con la llegada de los conquistadores españoles a finales del siglo XV, lo que marcó el inicio de la época hispánica en la historia de Colombia.</p>
+        <p class="art-prfo">A pesar de los siglos transcurridos, la herencia de estas culturas precolombinas sigue presente en la actualidad, y su legado continúa siendo una parte fundamental de la identidad cultural y patrimonio de Colombia. Los vestigios arqueológicos y las tradiciones que se han preservado ofrecen valiosos insights sobre la riqueza y diversidad de las civilizaciones que poblaron este territorio antes de la llegada de los europeos.</p>
+
+        <div class="sub-temas">
+            <h3>Período Paleoindio (hasta el 8000 a.C.)</h3>
+            <p>El Período Paleoindio es el periodo más antiguo de la época precolombina en Colombia y abarca desde los primeros rastros de presencia humana hasta aproximadamente el 8000 a.C. Durante este tiempo, las poblaciones eran nómadas y dependían principalmente de la caza y la recolección para subsistir.</p>
+            <p>A continuación, te proporciono más detalles sobre el Período Paleoindio en Colombia:</p>
+            <div class="sub-temas-2" style="padding: 20px 50px 50px 50px">
+                <h4>Herramientas y Tecnología</h4>
+                <p>Durante este período, las herramientas eran principalmente de piedra. Los grupos paleoindios fabricaban puntas de proyectil y otros utensilios a partir de rocas como el sílex. Estas herramientas eran esenciales para la caza y la preparación de alimentos.</p>
+                <h4>Estilo de Vida Nómada</h4>
+                <p>Los grupos paleoindios se movían en busca de recursos naturales, siguiendo a los animales que cazaban y recolectando plantas comestibles. No establecían asentamientos permanentes y dependían de su conocimiento del entorno para sobrevivir.</p>
+                <h4>Adaptación al Entorno</h4>
+                <p>Durante este período, los grupos humanos estaban adaptados a una variedad de entornos, incluyendo áreas montañosas, valles, zonas costeras y selvas. Esta adaptación demostró una notable capacidad para utilizar y adaptarse a los recursos disponibles en diferentes ecosistemas.</p>
+                <h4>Cultura Material</h4>
+                <p>Aunque las evidencias arqueológicas del Período Paleoindio son escasas en comparación con períodos posteriores, se han encontrado restos de herramientas de piedra, puntas de proyectil y otros artefactos que proporcionan pistas sobre la tecnología y el estilo de vida de estos primeros pobladores.</p>
+                <h4>Conexiones Regionales</h4>
+                <p>A pesar de ser nómadas, es probable que los grupos paleoindios tuvieran interacciones con poblaciones vecinas. Esto podría haber incluido intercambios de bienes, conocimientos y, posiblemente, intercambios matrimoniales.</p>
+            </div>
+            <p>Es importante destacar que la información sobre el Período Paleoindio en Colombia está basada en evidencias arqueológicas y estudios científicos. Aunque se han hecho importantes descubrimientos, aún existen muchas preguntas sobre la vida y las culturas de estos primeros habitantes de Colombia. El estudio de este período es fundamental para comprender la evolución y la adaptación de las poblaciones humanas en el continente americano.</p>
+            <h3>Período Arcaico (8000 a.C. - 1500 a.C.)</h3>
+            <p>El Período Arcaico en la historia de Colombia abarca desde aproximadamente el 8000 a.C. hasta el 1500 a.C. Durante este tiempo, se observaron importantes avances en la forma en que las poblaciones indígenas se organizaban y subsistían en el territorio colombiano.</p>
+            <p>A continuación, te proporciono más detalles sobre el Período Arcaico en Colombia:</p>
+            <div class="sub-temas-2" style="padding: 20px 50px 50px 50px">
+                <h4>Desarrollo de la Agricultura</h4>
+                <p>Uno de los hitos más significativos del Período Arcaico fue la transición hacia la agricultura. Las poblaciones comenzaron a cultivar plantas como maíz, yuca y calabaza, lo que les permitió establecer asentamientos más permanentes y depender menos de la caza y la recolección.</p>
+                <h4>Sedentarización y Establecimiento de Comunidades</h4>
+                <p>Con la introducción de la agricultura, las poblaciones pudieron asentarse en áreas específicas por períodos más largos. Esto llevó al desarrollo de comunidades más estables y al surgimiento de asentamientos más grandes</p>
+                <h4>Desarrollo de la Alfarería</h4>
+                <p>Durante el Período Arcaico, las poblaciones empezaron a desarrollar técnicas de alfarería, lo que les permitió crear recipientes para almacenar y cocinar alimentos. Esto representó un avance importante en la tecnología y la cultura material.</p>
+                <h4>Mayor Diversificación de la Tecnología</h4>
+                <p>Además de la alfarería, se observó una mayor diversificación en las herramientas y utensilios utilizados por las poblaciones del Período Arcaico. Se fabricaban artefactos de piedra y hueso para actividades como la caza, la pesca y la agricultura.</p>
+                <h4>Intercambio y Comercio</h4>
+                <p>A medida que las poblaciones se establecieron en áreas específicas, se intensificó el intercambio de bienes entre diferentes grupos. Esto permitió la difusión de tecnologías y productos especializados.</p>
+                <h4>Desarrollo de Prácticas Funerarias</h4>
+                <p>Durante el Período Arcaico, se empezaron a observar evidencias de prácticas funerarias más complejas, lo que sugiere un mayor nivel de organización social y cultural.</p>
+            </div>
+            <h3>Período Formativo (1500 a.C. - 500 d.C.)</h3>
+            <p>El Período Formativo en la historia de Colombia, que abarca desde aproximadamente el 1500 a.C. hasta el 500 d.C., se caracterizó por el surgimiento de culturas complejas con organizaciones sociales más elaboradas. Durante este período, se observaron importantes avances en la agricultura, la tecnología y la organización social.</p>
+            <p>A continuación, te proporciono más detalles sobre el Período Formativo en Colombia:</p>
+            <div class="sub-temas-2" style="padding: 20px 50px 50px 50px">
+                <h4>Desarrollo de Sociedades Estratificadas</h4>
+                <p>Durante el Período Formativo, se evidenció el surgimiento de sociedades con una mayor jerarquía social y divisiones de trabajo más especializadas. Esto se reflejó en la construcción de estructuras jerárquicas y la diferenciación entre clases sociales.</p>
+                <h4>Expansión de la Agricultura</h4>
+                <p>La agricultura continuó desempeñando un papel fundamental en la subsistencia de las poblaciones durante este período. Se observó un mayor énfasis en el cultivo de cultivos como el maíz, frijoles, calabaza y tubérculos, lo que permitió el sustento de poblaciones más grandes y complejas.</p>
+                <h4>Avances Tecnológicos</h4>
+                <p>Se evidenció un mayor refinamiento en la tecnología, incluyendo la producción de cerámica más elaborada y decorada, así como la mejora en la metalurgia para la fabricación de herramientas y objetos ornamentales.</p>
+                <h4>Desarrollo de Centros Ceremoniales y Urbanización</h4>
+                <p>Durante el Período Formativo, se construyeron centros ceremoniales y estructuras más elaboradas que reflejaban una mayor organización social y la importancia de la religión en la vida de las comunidades.</p>
+                <h4>Arte y Expresión Cultural</h4>
+                <p>Se observó una mayor sofisticación en las expresiones artísticas y culturales. Se crearon esculturas, cerámica decorativa y otros objetos de arte que reflejaban las creencias y prácticas culturales de la época</p>
+                <h4>Intercambio y Comercio Regional</h4>
+                <p>Se intensificaron las redes de intercambio y comercio entre diferentes grupos y regiones, lo que permitió la circulación de bienes y conocimientos </p>
+                <h4>Desarrollo de Sistemas Políticos y Religiosos</h4>
+                <p>Surgieron sistemas políticos más centralizados y jerárquicos, así como prácticas religiosas y ceremoniales más complejas que reflejaban la importancia de la religión en la vida de las comunidades.</p>
+            </div>
+            <h3>Período Clásico (500 d.C. - 1000 d.C.)</h3>
+            <p>El Período Clásico en la historia de Colombia abarca desde aproximadamente el 500 d.C. hasta el 1000 d.C. Durante este tiempo, se produjo un florecimiento cultural y arquitectónico en varias regiones del país. Se caracterizó por la consolidación y expansión de algunas de las grandes civilizaciones precolombinas en Colombia.</p>
+            <p>A continuación, te proporciono más detalles sobre el Período Clásico en Colombia:</p>
+            <div class="sub-temas-2" style="padding: 20px 50px 50px 50px">
+                <h4>Expansión y Complejidad de las Sociedades</h4>
+                <p>Durante el Período Clásico, algunas de las culturas precolombinas existentes se expandieron y desarrollaron estructuras sociales más complejas. Esto incluyó la formación de clases sociales más definidas y la consolidación de jerarquías.</p>
+                <h4>Logros Arquitectónicos</h4>
+                <p>Se construyeron grandes estructuras arquitectónicas y centros urbanos que reflejaban un alto nivel de organización y conocimiento en la planificación y construcción. Ejemplos notables incluyen las construcciones de los muiscas en la región andina y los taironas en la Sierra Nevada de Santa Marta.</p>
+                <h4>Desarrollo de Sistemas de Escritura y Registros</h4>
+                <p>Algunas culturas precolombinas del Período Clásico, como los muiscas, desarrollaron sistemas de escritura y registros que les permitieron llevar un control más preciso de su sociedad y actividades.</p>
+                <h4>Innovaciones Tecnológicas y Artísticas</h4>
+                <p> Se observó un refinamiento y expansión de la tecnología y las artes. Por ejemplo, se crearon objetos de cerámica más elaborados y se llevaron a cabo avances en la metalurgia y la producción de tejidos.</p>
+                <h4>Expansión Territorial y Comercio</h4>
+                <p>Durante este período, algunas culturas expandieron su influencia y territorio a través de conquistas y alianzas. Esto llevó a una mayor interacción y comercio entre diferentes grupos culturales.</p>
+                <h4>Desarrollo de Sistemas de Riego y Agricultura Avanzada</h4>
+                <p>Se implementaron sistemas de riego más sofisticados que permitieron un mayor rendimiento agrícola. Esto contribuyó al crecimiento de las poblaciones y al desarrollo de sociedades más complejas.</p>
+                <h4>Prácticas Religiosas y Culto a los Antepasados</h4>
+                <p>Las prácticas religiosas adquirieron una mayor importancia, y el culto a los antepasados desempeñó un papel central en la vida espiritual y cultural de muchas comunidades.</p>
+            </div>
+            <h3>Período Posclásico (1000 d.C. - 1500 d.C.)</h3>
+            <p>El Período Posclásico en la historia de Colombia abarca desde aproximadamente el 1000 d.C. hasta la llegada de los conquistadores españoles en el siglo XVI. Durante este tiempo, se produjo una consolidación y expansión de algunas de las grandes civilizaciones precolombinas en Colombia, así como un aumento en la complejidad de las estructuras sociales y culturales.</p>
+            <p>A continuación, te proporciono más detalles sobre el Período Posclásico en Colombia:</p>
+            <div class="sub-temas-2" style="padding: 20px 50px 50px 50px">
+                <h4>Desarrollo y Consolidación de Grandes Civilizaciones</h4>
+                <p>Durante el Período Posclásico, varias de las grandes civilizaciones precolombinas en Colombia alcanzaron su apogeo. Por ejemplo, los muiscas en la región andina, los taironas en la Sierra Nevada de Santa Marta y los zenúes en la región Caribe experimentaron un alto grado de complejidad social y cultural.</p>
+                <h4>Estructuras Políticas y Sociales</h4>
+                <p>Se establecieron sistemas políticos más centralizados y jerarquizados en muchas de las culturas de este período. Surgieron líderes y élites que gobernaban sobre territorios más extensos.</p>
+                <h4>Avances en la Agricultura y Sistemas de Riego</h4>
+                <p>Se observaron mejoras en las técnicas agrícolas y en los sistemas de riego, lo que permitió un mayor rendimiento de los cultivos y el sostenimiento de poblaciones más grandes.</p>
+                <h4>Desarrollo de la Arquitectura y Urbanización</h4>
+                <p>Se construyeron impresionantes obras arquitectónicas, como templos, palacios y sistemas de terrazas agrícolas. Estas construcciones reflejaban la habilidad de las civilizaciones para planificar y construir estructuras de gran envergadura.</p>
+                <h4>Arte y Expresión Cultural</h4>
+                <p>Se produjeron obras de arte y objetos ceremoniales de gran calidad y belleza. Se utilizaban técnicas avanzadas de cerámica, metalurgia y tejido para crear objetos ornamentales y decorativos.</p>
+                <h4>Redes de Comercio y Relaciones Diplomáticas</h4>
+                <p>Se intensificaron las redes de comercio entre diferentes culturas, lo que llevó a una mayor interacción cultural y al intercambio de bienes y conocimientos especializados. También se establecieron relaciones diplomáticas y alianzas entre diferentes grupos.</p>
+                <h4>Prácticas Religiosas y Rituales</h4>
+                <p>Las prácticas religiosas desempeñaron un papel central en la vida de las comunidades, y se llevaron a cabo rituales y ceremonias para honrar a los dioses y antepasados.</p>
+            </div>
+            <p>La historia precolombina de Colombia es un fascinante viaje a través del tiempo, que nos permite explorar las complejas y ricas culturas que poblaron estas tierras mucho antes de la llegada de los colonizadores europeos. Desde los primeros rastros de presencia humana en el Período Paleoindio hasta las grandiosas civilizaciones del Período Posclásico, cada etapa revela una narrativa única de adaptación, innovación y desarrollo social y cultural.</p>
+            <p>Estas culturas precolombinas dejaron un legado duradero en la historia y el patrimonio de Colombia. Sus avances en tecnología, agricultura, arte y organización social siguen siendo motivo de admiración y estudio en la actualidad. Además, su profundo respeto por la naturaleza y su capacidad para adaptarse a diversos entornos nos ofrecen valiosas lecciones sobre la relación entre la humanidad y su entorno.</p>
+            <p>Al explorar y aprender sobre la historia precolombina de Colombia, no solo ganamos una apreciación más profunda de la rica herencia cultural de este país, sino también una comprensión más completa de la extraordinaria diversidad y complejidad de las sociedades humanas a lo largo del tiempo.</p>
+            <p>Esperamos que este viaje a través de los períodos Paleoindio, Arcaico, Formativo, Clásico y Posclásico haya proporcionado una visión enriquecedora de las culturas que dieron forma a la Colombia ancestral. Que esta mirada al pasado nos inspire a valorar y preservar la riqueza cultural y arqueológica que nos ha sido legada, para las generaciones venideras y para el mundo entero.</p>
+        </div>
+
+
+        <!--época precolombina final-->
+
+        <!--época hispánica-->
+        <h2 class="art-title section" id="epoca-hispanica">3- La época hispánica</h2>
+        <p class="art-prfo">La época hispánica en la historia de Colombia se refiere al periodo que abarca desde la llegada de los exploradores españoles a territorio colombiano en el siglo XVI hasta principios del siglo XIX, cuando se logró la independencia de España.</p>
+        <p class="art-prfo">En 1499, el navegante español Rodrigo de Bastidas llegó a la costa norte de lo que hoy es Colombia, marcando el inicio del proceso de colonización. Posteriormente, en 1538, el conquistador Gonzalo Jiménez de Quesada fundó la ciudad de Santa Fe de Bogotá, que se convertiría en la capital del Virreinato de la Nueva Granada.</p>
+        <p class="art-prfo">Durante este periodo, los españoles impusieron su dominio sobre las poblaciones indígenas y establecieron un sistema de gobierno colonial que incluía la explotación de recursos naturales y el establecimiento de encomiendas y haciendas.</p>
+        <p class="art-prfo">La colonia fue parte del vasto Virreinato del Perú hasta 1717, cuando se creó el Virreinato de la Nueva Granada, que incluía los territorios de lo que ahora son Colombia, Ecuador, Venezuela y Panamá.</p>
+        <p class="art-prfo">A lo largo de la época hispánica, Colombia experimentó una serie de cambios sociales, económicos y culturales. Se introdujeron nuevas tecnologías, se establecieron sistemas de producción agrícola y se construyeron ciudades y caminos.</p>
+        <p class="art-prfo">Sin embargo, este periodo también estuvo marcado por la explotación y la opresión de las poblaciones indígenas y africanas, así como por conflictos y tensiones sociales.</p>
+        <p class="art-prfo">La época hispánica dejó un legado profundo en la cultura, la lengua y la estructura social de Colombia, y su influencia sigue siendo evidente en muchos aspectos de la vida contemporánea del país.</p>
+        <div class="sub-temas">
+            <h3>Inicio de la época hispánica</h3>
+            <p>La época hispánica en Colombia comienza con la llegada y conquista de los españoles. Alonso de Ojeda fue quien realmente descubrió el territorio colombiano, llegando por Santo Domingo al Cabo de la Vela.</p>
+            <h3>Fundación de Ciudades</h3>
+            <p>Santa Marta fue la ciudad a la que llegaron los primeros asentamientos españoles, de hecho, es la “ciudad española” más antigua después de Panamá; Rodrigo de Bastidas la fundó en 1525. Luego de la exploración por el Caribe colombiano, Pedro de Heredia fundó Cartagena de Indias y con esto terminó la conquista por toda la costa. Al mismo tiempo, comenzó la expedición hacia el interior del país, Gonzalo Jiménez de Quesada fue el capitán que comandó el ejército y el fundador en 1538 de la ciudad de Santa Fe de Bogotá.</p>
+            <h3>Independencia (1810-1819)</h3>
+            <p>La independencia de Colombia, a cargo del general Simón Bolívar y su ejército, que tuvo su desarrollo entre los años 1810 y 1819 le puso fin al dominio español en los territorios que comprendían el Virreinato de la Nueva Granada.</p>
+            <h3>Conquista de Colombia</h3>
+            <p>La conquista terminó en 1550, con la fundación de las últimas grandes ciudades. Los pueblos indígenas que se encontraban en el territorio colombiano sufrieron ante la llegada de la conquista española, quienes terminaron desapareciendo por las batallas de la conquista.</p>
+        </div>
+        <!--época hispánica final-->
+        <!--época de la independencia-->
+        <h2 class="art-title section" id="epoca-de-la-independencia">4- época de la independencia</h2>
+        <p class="art-prfo">La época de la independencia en la historia de Colombia se refiere a un periodo crucial que abarca aproximadamente desde finales del siglo XVIII hasta principios del XIX, marcado por el proceso de emancipación de Colombia de la dominación colonial española.</p>
+        <p class="art-prfo">El despertar de ideas ilustradas y los movimientos independentistas en Europa y América Latina influyeron en el despertar de un fervor nacionalista en las colonias americanas, incluida Colombia. Eventos como la Revolución Francesa y la independencia de los Estados Unidos inspiraron a líderes y pobladores locales a cuestionar el dominio español y a buscar la autodeterminación.</p>
+        <p class="art-prfo">En 1810, se desencadenaron movimientos de independencia en varias regiones de Colombia, como resultado de tensiones políticas y económicas, así como del descontento con el régimen colonial. Aunque estos esfuerzos iniciales fueron en gran parte locales, dieron lugar a un proceso más amplio que culminó en la independencia definitiva de Colombia en 1819, con la victoria en la Batalla de Boyacá, liderada por figuras icónicas como Simón Bolívar y Francisco de Paula Santander.</p>
+        <p class="art-prfo">Este periodo también vio la formación de la Gran Colombia en 1819, una federación que incluía a Colombia, Venezuela, Ecuador y Panamá. Sin embargo, debido a desacuerdos políticos y conflictos internos, la Gran Colombia se disolvió en 1831, dando paso a la creación de la República de la Nueva Granada, que posteriormente evolucionó en la Confederación Granadina y finalmente en los Estados Unidos de Colombia.</p>
+        <p class="art-prfo">La época de la independencia dejó un legado duradero en Colombia, forjando las bases de la identidad nacional y estableciendo los cimientos políticos y sociales de la nación. Además, esta lucha por la independencia influyó en el desarrollo posterior de la política y la cultura en Colombia, dejando una huella indeleble en la historia del país.</p>
+
+        <div class="sub-temas">
+            <h3>Inicio de la Independencia (1810)</h3>
+            <p>El proceso de independencia de Colombia comenzó el 20 de julio de 1810, cuando los criollos de Bogotá formaron una junta de gobierno que desplazó del poder al virrey español.</p>
+            <h3>Primera República (1810-1816)</h3>
+            <p>Esta etapa, también conocida como «Patria Boba», marcó el inicio de las luchas por la independencia. El desencadenante de la insurrección fue una pelea entre el comerciante español José González Llorente y el criollo Luis de Rubio, que tuvo lugar en Bogotá, el 20 de julio de 1810.</p>
+            <h3>Reconquista española (1816-1819):</h3>
+            <p>En 1815, el rey de España Fernando VII envió una expedición liderada por el general Pablo Morillo para reconquistar sus dominios en América.</p>
+            <h3>Campaña Libertadora (1819)</h3>
+            <p>En 1819, Simón Bolívar, que había liberado gran parte de Venezuela, cruzó los Andes y entró en Nueva Granada.</p>
+            <h3>Gran Colombia (1819-1830)</h3>
+            <p>Finalizó en 1822, luego de que Simón Bolívar derrotara a los realistas y formara la Gran Colombia, que integró en un solo Estado a Nueva Granada, Venezuela y Ecuador.</p>
+        </div>
+        <!--época de la independencia final-->
+        <!--época de la República del siglo XIX final-->
+        <h2 class="art-title section" id="la-republica-del-siglo-xix">5- La República del siglo XIX</h2>
+        <p class="art-prfo">La República del siglo XIX en la historia de Colombia es un periodo de gran importancia que abarca desde la independencia de España en 1810 hasta finales del siglo. Durante este tiempo, Colombia experimentó una serie de transformaciones políticas, sociales y económicas que moldearon el curso del país.</p>
+        <p class="art-prfo">Después de declarar su independencia en 1810, Colombia enfrentó una larga y tumultuosa lucha por la consolidación de su soberanía. El proceso culminó con la Batalla de Boyacá en 1819, donde las fuerzas independentistas lideradas por Simón Bolívar lograron una victoria decisiva sobre las tropas realistas, asegurando la independencia de Colombia y la formación de la Gran Colombia, una federación que incluía a Venezuela, Ecuador y Panamá.</p>
+        <p class="art-prfo">Sin embargo, las tensiones internas y las luchas políticas llevaron a la disolución de la Gran Colombia en 1831, dando lugar a la creación de la República de la Nueva Granada, que posteriormente se convertiría en la Confederación Granadina y luego en los Estados Unidos de Colombia.</p>
+        <p class="art-prfo">A lo largo del siglo XIX, Colombia enfrentó numerosos desafíos, incluyendo conflictos políticos entre liberales y conservadores, guerras civiles, y la intervención de potencias extranjeras. Estos eventos tuvieron un impacto significativo en la estabilidad política y social del país.</p>
+        <p class="art-prfo">Además, durante este periodo se llevaron a cabo importantes avances en áreas como la educación, la infraestructura y la economía, con la construcción de vías férreas y el impulso de la industria. Sin embargo, también hubo momentos de inestabilidad económica y crisis financiera.</p>
+        <div class="sub-temas">
+            <h3>Inicio del Siglo (1800-1819)</h3>
+            <p>Durante los primeros años del siglo XIX, Colombia experimentó una serie de cambios políticos y sociales significativos. En 1801, se publicó en Santafé el Correo Curioso, Económico y Mercantil, dirigido por José de Azuola y Jorge Tadeo Lozano. En 1810, estalló un motín del pueblo en Santafé, hábilmente dirigido por José María Carbonell.</p>
+            <h3>Formación de la República (1819-1830)</h3>
+            <p>En 1819, se formó la Gran Colombia, que integró en un solo Estado a Nueva Granada, Venezuela y Ecuador. En 1821, se llevó a cabo el primer Congreso Constituyente de Cúcuta, que abogó por la creación de tres estados federales.</p>
+            <h3>Lucha por el Poder (1830-1899):</h3>
+            <p>Durante el siglo XIX, Colombia sufrió cambios importantes en todas las áreas del convivir nacional enraizadas en las luchas por el poderío político. Este siglo se caracterizó por ser el escenario de la lucha por el poder político de dos clases socioeconómicas existentes representadas por dos partidos políticos: los liberales y los conservadores.</p>
+        </div>
+        <!--época de la República del siglo XIX final-->
+        <!--siglo XX-->
+        <h2 class="art-title section" id="siglo-xx-en-colombia">6- Siglo XX en Colombia</h2>
+        <p class="art-prfo">El siglo XX en Colombia fue un periodo de transformación profunda y compleja en la historia del país. Se extendió desde 1900 hasta el año 2000 y estuvo marcado por una serie de eventos políticos, sociales y económicos que dejaron una huella duradera en la nación.</p>
+        <p class="art-prfo">Durante este siglo, Colombia experimentó alternancias entre gobiernos liberales y conservadores, así como periodos de violencia política y conflictos armados internos que dejaron una marca indeleble en la sociedad colombiana. Además, el país enfrentó desafíos como la industrialización, la urbanización y cambios significativos en la economía y la cultura.</p>
+        <p class="art-prfo">El siglo XX también fue testigo de importantes avances y desafíos en áreas como la educación, la infraestructura y la participación política de diversos sectores de la sociedad. Colombia se consolidó como una nación con una rica diversidad étnica y cultural, y su papel en el ámbito regional e internacional se fortaleció.</p>
+        <p class="art-prfo">A pesar de los logros y avances, el siglo XX también estuvo marcado por momentos de violencia, conflictos armados y desigualdades sociales, desafíos que el país sigue enfrentando en la actualidad.</p>
+        <p class="art-prfo">En resumen, el siglo XX en Colombia fue un periodo de cambios profundos y complejos que moldearon la Colombia contemporánea y sentaron las bases para los desafíos y logros que el país enfrenta en el siglo XXI.</p>
+        <div class="sub-temas">
+            <h3>Primera Mitad del Siglo XX (1900-1950)</h3>
+            <p>Esta etapa estuvo marcada por la alternancia en el poder entre los partidos Liberal y Conservador, así como por el intento de modernización económica y social. Durante este periodo, se implementaron reformas importantes, como la Reforma de 1936 que buscaba mejorar la distribución de tierras y derechos laborales. Sin embargo, también se vivieron momentos de violencia política y social, como el Bogotazo en 1948, un evento que desencadenó un periodo de violencia conocido como "La Violencia", que duraría hasta mediados de los años 50.</p>
+            <h3>La Violencia (1948-1958)</h3>
+            <p>Este fue un periodo de violencia a gran escala, en el cual los conflictos políticos entre liberales y conservadores se trasladaron a enfrentamientos armados en distintas partes del país. Miles de personas perdieron la vida en esta lucha que afectó profundamente a la sociedad colombiana.</p>
+            <h3>Frente Nacional (1958-1974)</h3>
+            <p>Como respuesta a la violencia de la década anterior, se implementó el Frente Nacional, un acuerdo entre los partidos Liberal y Conservador para compartir el poder político de manera equitativa. Durante esta etapa, se buscó estabilizar el país y promover políticas de reconciliación, aunque también se generaron tensiones y movimientos de oposición.</p>
+            <h3>Conflicto Armado Interno (décadas de 1960-2010)</h3>
+            <p> A partir de los años 60, Colombia enfrentó un prolongado conflicto armado interno, protagonizado por guerrillas, paramilitares y fuerzas del Estado. Este conflicto tuvo un impacto profundo en la sociedad y la política colombiana, dejando miles de víctimas y generando desplazamientos masivos de población.</p>
+        </div>
+        <p class="art-prfo">El siglo XX en Colombia estuvo marcado por una serie de desafíos y avances significativos que han dejado una profunda influencia en la sociedad y la política del país. Estos eventos han moldeado la Colombia contemporánea y continúan siendo temas relevantes en la actualidad.</p>
+        <!--siglo XX final-->
+        <!--siglo XXI-->
+        <h2 class="art-title section" id="siglo-xxi-en-colombia">7- Siglo XXI en Colombia</h2>
+        <p class="art-prfo">El siglo XXI en Colombia representa una nueva etapa en la historia del país, marcada por una serie de desafíos y oportunidades que han moldeado su desarrollo político, social y económico.</p>
+        <p class="art-prfo">A medida que se adentró en este siglo, Colombia enfrentó importantes retos, incluyendo la persistencia del conflicto armado interno y el narcotráfico, así como la necesidad de abordar problemas de desigualdad, pobreza y acceso a servicios básicos. A pesar de estos desafíos, Colombia también ha experimentado avances notables, como procesos de paz con grupos insurgentes y un crecimiento económico sostenido.</p>
+        <p class="art-prfo">El siglo XXI en Colombia ha sido testigo de la continuación de esfuerzos para consolidar la paz y la reconciliación, así como para promover la inclusión social y el desarrollo sostenible. Además, el país ha buscado fortalecer su posición en la escena internacional, participando activamente en iniciativas regionales y globales.</p>
+        <p class="art-prfo">En resumen, el siglo XXI en Colombia representa una nueva fase en la historia del país, caracterizada por la búsqueda de la estabilidad, la construcción de la paz y el impulso hacia un futuro de progreso y prosperidad para todos los colombianos</p>
+        <div class="sub-temas">
+            <h3>Procesos de Paz (2000-2016)</h3>
+            <p>A comienzos del siglo XXI, Colombia continuó sus esfuerzos para poner fin al prolongado conflicto armado interno. Se llevaron a cabo importantes negociaciones con grupos guerrilleros, y en 2016, se logró un hito significativo con la firma del Acuerdo de Paz con las Fuerzas Armadas Revolucionarias de Colombia (FARC). Este acuerdo buscó poner fin a más de medio siglo de conflicto armado y sentar las bases para una paz duradera.</p>
+            <h3>Desafíos en la Implementación del Acuerdo de Paz (2016-actualidad)</h3>
+            <p>La implementación del Acuerdo de Paz ha sido un proceso complejo y desafiante. Ha requerido la colaboración entre diferentes sectores de la sociedad y la adaptación a nuevos enfoques en términos de justicia, reintegración y desarrollo rural. A pesar de los avances, persisten desafíos en la consolidación de la paz y la reconciliación.</p>
+            <h3>Desarrollo Económico y Social</h3>
+            <p>A lo largo del siglo XXI, Colombia ha experimentado un crecimiento económico sostenido y ha trabajado en la diversificación de su economía. Se han implementado políticas para promover la inversión extranjera, el emprendimiento y el desarrollo de sectores como la tecnología y la energía renovable.</p>
+            <h3>Desafíos Sociales y Ambientales</h3>
+            <p>Aunque se han logrado avances, Colombia enfrenta desafíos importantes en términos de desigualdad, acceso a servicios básicos y gestión sostenible de recursos naturales. Además, el país se enfrenta a problemas ambientales, como la deforestación y la conservación de la biodiversidad.</p>
+            <h3>Participación en la Escena Internacional</h3>
+            <p>Colombia ha mantenido una presencia activa en la arena internacional, participando en organismos multilaterales y contribuyendo a iniciativas globales. Ha establecido relaciones diplomáticas con diversos países y ha buscado fortalecer la cooperación regional en temas como seguridad y desarrollo.</p>
+        </div>
+        <p class="art-prfo">El siglo XXI en Colombia se caracteriza por una búsqueda constante de la consolidación de la paz, el desarrollo sostenible y la promoción de la inclusión social. Aunque enfrenta desafíos importantes, el país ha demostrado resiliencia y continúa trabajando hacia un futuro de progreso y bienestar para todos los colombianos.</p>
+        <!--siglo XXI final-->
+    </div>
+    <div class="subir-del-todo" id="scrollUpButton" onclick="scrollToTop()">
+        <img src="caret-arriba.png" alt="">
+    </div>
+    <div class="recommendations-section" style="
+    width: 50%;
+    margin: 108px auto 0;
+    font-family: sans-serif; 
+    font-size: 22px;
+">
+    <h3 style="font-family: 'Bebas Neue', sans-serif; text-align: center; font-size: 3rem;">Recomendaciones</h3>
+    <div class="imgs" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 1fr;">
+        <a href="https://nowpastore.com/">
+            <img class="nowpastore-webpage" style="max-width: 100%; padding-bottom:50px ;" src="halloween-webpage.png" alt="nowpastore pagina web historias de halloween">
+        </a>
+    </div>
+    </div>
+
+    <div class="comments-section">
+        <h2 class="comentarios" id="coment">Comentarios</h2>
+    </div>
+    <footer class="footer">
+        <div class="container d-flex justify-content-between">
+          <div>
+            <h3>Contacto | Ayuda</h3>
+            <p id="help-scroll-to">Para consultas, sugerencias y colaboraciones, contáctanos dando click aquí: <span class="btn-gmail" style="cursor: pointer; font-weight: bold;">gananciasonlinesas@gmail.com</span></p>
+          </div>
+          <div>
+        
+        </div>
+        <hr>
+        <div class="container text-center">
+          <p>&copy; 2023 Nowpad Company. Todos los derechos reservados.</p>
+        </div>
+      </footer>
+
+<script>
+
+    function toggleMenu() {
+        var opciones = document.getElementById('opciones');
+        if (opciones.style.display === 'none' || opciones.style.display === '') {
+            opciones.style.display = 'block';
+        } else {
+            opciones.style.display = 'none';
+        }
+    }
+    function scrollToTop() {
+    const currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+    if (currentPosition > 0) {
+        window.requestAnimationFrame(scrollToTop);
+        window.scrollTo(0, currentPosition - currentPosition / 8);
+        }
+    }
+</script>
+    
+</body>
+</html>
